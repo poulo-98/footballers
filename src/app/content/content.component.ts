@@ -12,7 +12,7 @@ export class ContentComponent implements OnInit {
   constructor(private myService: MyServiceService) { }
 
   ngOnInit(): void {
-    this.myService.selectedFootballer.subscribe((value: { name: string; club: string; } | null) => {
+    this.myService.selectedFootballer.apply((value: { name: string; club: string; } | null) => {
       this.selectedFootballer = value;
     });
   }

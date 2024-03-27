@@ -1,17 +1,22 @@
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 1000;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  right: 0;
+  background-color: #ffffff;
+  z-index: 999;
+}
 
-  .logo-left, .logo-right {
-    flex: none;
-  }
+.left, .right {
+  flex: none; /* Pour empêcher le rétrécissement des éléments */
+  width: 10px;
+  height: 10px;
+}
+
+.middle {
+  flex: 1; /* Pour occuper tout l'espace restant au milieu */
 }

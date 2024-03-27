@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {MyServiceService} from "../my-service.service";
 
 @Component({
@@ -7,9 +7,13 @@ import {MyServiceService} from "../my-service.service";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor(public myService: MyServiceService) { }
+  footballers: any;
+  constructor(public myService: MyServiceService) {
+    this.footballers=myService.footballers.apply((val: any)=>{return val})
+    console.log(this.footballers)
+  }
 
-  selectFootballer(player: { name: string, club: string }): void {
+  selectPlayer(player: { name: string, club: string }) {
     this.myService.selectedFootballer.set(player);
   }
 }

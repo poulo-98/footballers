@@ -1,11 +1,17 @@
-<header class="header">
-  <div class="logo-left">Left Logo</div>
-  <div class="footballers">
+<header>
+  <div class="left">
+    <!-- Logo à gauche -->
+    <img src="../src/assets/t">
+  </div>
+  <div class="middle"></div>
+  <div class="right">
+    <!-- Logo à droite -->
+  </div>
+  <nav>
     <ul>
-      <li *ngFor="let player of myService.footballers" (click)="selectFootballer(player)">
-        {{ player.name }}
+      <li *for="let player of myService.footballers()">
+        <a (click)="selectPlayer(player)">{{ player.name }}</a>
       </li>
     </ul>
-  </div>
-  <div class="logo-right">Right Logo</div>
+  </nav>
 </header>
