@@ -1,0 +1,9 @@
+.menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: lightgreen;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}

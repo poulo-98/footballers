@@ -1,0 +1,10 @@
+.selected-footballer {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.selected-footballer p {
+  margin: 5px 0;
+}

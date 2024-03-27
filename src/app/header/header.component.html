@@ -1,0 +1,11 @@
+<header class="header">
+  <div class="logo-left">Left Logo</div>
+  <div class="footballers">
+    <ul>
+      <li *ngFor="let player of myService.footballers" (click)="selectFootballer(player)">
+        {{ player.name }}
+      </li>
+    </ul>
+  </div>
+  <div class="logo-right">Right Logo</div>
+</header>
