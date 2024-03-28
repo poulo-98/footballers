@@ -1,10 +1,9 @@
-<div>
-  <h2>Selected Footballer</h2>
-  <div *ngIf="selectedFootballer" class="selected-footballer">
-    <p>Name: {{ selectedFootballer.name }}</p>
-    <p>Club: {{ selectedFootballer.club }}</p>
+<div class="content">
+  <div class="content-box" *ngIf="myService.selectedFootballer()">
+    <h2>Nom : {{ myService.selectedFootballer()?.name }}</h2>
+    <h2>Club : {{ myService.selectedFootballer()?.club }}</h2>
   </div>
-  <div *ngIf="!selectedFootballer">
+  <div *ngIf="!myService.selectedFootballer()">
     <p>No footballer selected</p>
   </div>
 </div>

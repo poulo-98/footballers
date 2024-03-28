@@ -10,4 +10,5 @@ export class MyServiceService {
   ]);
 
   selectedFootballer = signal<{ name: string, club: string } | null>(null);
+
 }

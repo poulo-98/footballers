@@ -6,14 +6,7 @@ import {MyServiceService} from "../my-service.service";
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
-export class ContentComponent implements OnInit {
-  selectedFootballer: { name: string, club: string } | null = null;
+export class ContentComponent {
+  constructor(protected myService: MyServiceService) { }
 
-  constructor(private myService: MyServiceService) { }
-
-  ngOnInit(): void {
-    this.myService.selectedFootballer.apply((value: { name: string; club: string; } | null) => {
-      this.selectedFootballer = value;
-    });
-  }
 }

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {MyServiceService} from "../my-service.service";
+import {of} from "rxjs";
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,9 @@ import {MyServiceService} from "../my-service.service";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  footballers: any;
+  footballers: { name: string, club: string }[];
   constructor(public myService: MyServiceService) {
-    this.footballers=myService.footballers.apply((val: any)=>{return val})
-    console.log(this.footballers)
+    this.footballers=myService.footballers()
   }
 
   selectPlayer(player: { name: string, club: string }) {

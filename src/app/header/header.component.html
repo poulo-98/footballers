@@ -1,17 +1,20 @@
-<header>
-  <div class="left">
-    <!-- Logo à gauche -->
-    <img src="../src/assets/t">
+<header class="header">
+  <div class="logo-left">
+    <img rel="icon" type="image/x-icon" ngSrc="favicon.ico" height="30" width="28" alt=""/>
   </div>
-  <div class="middle"></div>
-  <div class="right">
-    <!-- Logo à droite -->
-  </div>
-  <nav>
+  <div class="spacer"></div>
+  <div class="content-right">
+  <div class="footballers">
     <ul>
-      <li *for="let player of myService.footballers()">
-        <a (click)="selectPlayer(player)">{{ player.name }}</a>
-      </li>
+      @for (player of footballers; track player){
+        <li>
+          <a (click)="selectPlayer(player)">{{ player.name }}</a>
+        </li>
+      }
     </ul>
-  </nav>
+  </div>
+  <div class="logo-right">
+    <img rel="icon" type="image/x-icon" ngSrc="favicon.ico" height="30" width="28" alt=""/>
+  </div>
+  </div>
 </header>
