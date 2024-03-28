@@ -10,7 +10,7 @@ import {of} from "rxjs";
 export class HeaderComponent {
   footballers: { name: string, club: string }[];
   constructor(public myService: MyServiceService) {
-    this.footballers=myService.footballers()
+    this.footballers=myService.footballers();
   }
 
   selectPlayer(player: { name: string, club: string }) {
